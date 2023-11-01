@@ -1,10 +1,14 @@
 rdforms_specs.default({
-  language: 'en',
+  language: 'de',
   bundles: [
     ['../dcatapat.json'],
   ],
   main: [
-    'dcatat:OnlyCatalog'
+    'dcatat:OnlyCatalog',
+    'dcatat:OnlyDataset',
+    'dcatat:OnlyDistribution',
+    'dcatat:OnlyDataService',
+    'dcatat:OnlyCatalogRecord'
   ],
   language: document.targetLanguage,
   supportive: [

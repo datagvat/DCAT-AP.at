@@ -141,7 +141,7 @@
         "dcatat:dcterms:modified_cr",
         "dcatat:dcterms:conformsTo_cr",
         "dcatat:adms:status_cr",
-        "dcatat:dct:issued_cr",
+        "dcatat:dcterms:issued_cr",
         "dcatat:dcterms:description_cr",
         "dcatat:dcterms:language_cr",
         "dcatat:dcterms:title_cr",
