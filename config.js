@@ -1,5 +1,5 @@
-rdforms.spec({
-  language: 'de',
+rdforms_specs.default({
+  language: 'en',
   bundles: [
     ['../dcatapat.json'],
   ],
