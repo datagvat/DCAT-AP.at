@@ -11,7 +11,7 @@
   "templates": [
     {
       "type": "group",
-      "id": "dcatat:OnlyDataset",
+      "id": "dcatat:Dataset",
       "label": {
         "en": "Dataset",
         "sv": "Dataset",
@@ -60,7 +60,7 @@
     },
     {
       "type": "group",
-      "id": "dcatat:OnlyDistribution",
+      "id": "dcatat:Distribution",
       "constraints": {
         "rdf:type": "dcat:Distribution"
       },
@@ -102,7 +102,7 @@
       "nodetype": "URI"
     },
     {
-      "id": "dcatat:OnlyCatalog",
+      "id": "dcatat:Catalog",
       "type": "group",
       "nodetype": "RESOURCE",
       "label": {
@@ -136,7 +136,7 @@
     },
     {
       "type": "group",
-      "id": "dcatat:OnlyCatalogRecord",
+      "id": "dcatat:CatalogRecord",
       "label": {
         "en": "Catalog Record",
         "sv": "Catalog Record",
@@ -157,7 +157,7 @@
         "dcatat:dcterms:source_cr"
       ]},
     {
-      "id": "dcatat:OnlyDataService",
+      "id": "dcatat:DataService",
       "type": "group",
       "label": {
         "en": "Data service",

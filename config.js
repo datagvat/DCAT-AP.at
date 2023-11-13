@@ -4,11 +4,11 @@ rdforms_specs.default({
     ['../dcatapat.json'],
   ],
   main: [
-    'dcatat:OnlyCatalog',
-    'dcatat:OnlyDataset',
-    'dcatat:OnlyDistribution',
-    'dcatat:OnlyDataService',
-    'dcatat:OnlyCatalogRecord'
+    'dcatat:Catalog',
+    'dcatat:Dataset',
+    'dcatat:Distribution',
+    'dcatat:DataService',
+    'dcatat:CatalogRecord'
   ],
   language: document.targetLanguage,
   supportive: [
