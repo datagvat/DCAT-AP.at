@@ -4,4 +4,4 @@ Repository für die Entwicklung der österreichischen Variante von DCAT-AP als M
 
 Work in progress!
 
-Momentan geplant in [a relative link](./de)Deutsch und [a relative link](./en)Englisch.
+Momentan geplant in [Deutsch](./de/index.html) und [Englischk](./en).
