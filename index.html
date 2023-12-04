@@ -5,39 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <title>DCAT-AP AT - DRAFT</title>
+    <title>DCAT-AP AT - ENTWURF</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../libs/style.css">
+    <link rel="stylesheet" type="text/css" href="libs/style.css">
     <script src="https://unpkg.com/mermaid@8.9.0/dist/mermaid.min.js"></script>
 </head>
 <body class="h-entry">
 <div class="head">
-    <h1 class="title">DCAT-AP AT - DRAFT</h1>
-    <h2 class="subtitle">2023-10-31</h2>
-    <h2 class="subtitle">Specification of DCAT-AP for Austria</h2>
+    <h1 class="title">Metadaten DCAT-AP AT</h1>
+    <h2 class="subtitle">Erläuterungen zur Anpassung von DCAT-AP für Österreich</h2>
     <div>
         <dl>
-            <dt>Current version:</dt>
-            <dd><a href="./">Link</a></dd>
-            <dt class="editor">Editor:</dt>
-            <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="mailto:hannes@metasolutions.se">Hannes Ebner</a> - <a href="https://entryscape.com">MetaSolutions AB</a></dd>
-            <dt class="editor">Contributors:</dt>
-            <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="mailto:vorname.nachname@organisation.gv.at">Vorname Nachname</a> - <a href="https://organisation.gv.at">Organisation</a></dd>
-            <dt class="editor">On behalf of:</dt>
-            <dd class="editor p-author h-card vcard"><a href="https://">Working Group Metadata of Cooperation OGD Austria</a></dd>
+            <dt>URL:</dt>
+            <dd><a href="./">https://dcat-ap.at</a></dd>
+            <dt>Version / Datum:</dt>
+            <dd>1.0 / dd.mm.yyyy</dd>
+            <dt class="editor">Verfasst von:</dt>
+            <dd class="editor p-author h-card vcard">Brigitte Barotanyi (BMF)</dd>
+            <dd class="editor p-author h-card vcard">Hannes Ebner (MetaSolutions AB)</dd>
+            <dd class="editor p-author h-card vcard">Gregor Eibl (Donau-Universität Krems)</dd>
+            <dd class="editor p-author h-card vcard">Gerhard Hartmann (Stadt Wien)</dd>
+            <dd class="editor p-author h-card vcard">Manfred Mittlböck (Research Studios Austria Forschungsgesellschaft mbH)</dd>
+            <dd class="editor p-author h-card vcard">Rainer Prager (Land Niederösterreich)</dd>
+            <dd class="editor p-author h-card vcard">Michael Reichart (Bundesrechenzentrum GmbH)</dd>
+            <!--<dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="mailto:vorname.nachname@organisation.gv.at">Vorname Nachname</a> - <a href="https://organisation.gv.at">Organisation</a></dd>-->
+            <dt class="editor">Projektteam/Arbeitsgruppe</dt>
+            <dd class="editor p-author h-card vcard">BLSG Fachgruppe data.gv.at</dd>
+            <dd class="editor p-author h-card vcard">BLSG AG-II</dd>
+            <dd class="editor p-author h-card vcard">Arbeitsgruppe Metadaten DCAT-AP der Cooperation OGD Österreich</dd>
             <dt>Lizenz:</dt>
             <dd><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></dd>
+            <dt>Doku-Klasse:</dt>
+            <dd>verbindlich</dd>
+            <dt>Kurzbezeichnung:</dt>
+            <dd>metadaten-DCAT-AP-AT 1.0</dd>
+            <dt>Doku-Stadium</dt>
+            <dd>Empfehlung</dd>
+            <dt>Gültig seit:</dt>
+            <dd>dd.mm.yyyy</dd>
+            <dt>Nächste Überprüfung am:</dt>
+            <dd>dd.mm.yyyy</dd>
         </dl>
     </div>
-    <p class="copyright">Copyright © 2023 <a href="https://">...</a></p>
+    <p class="copyright">Copyright © 2023 <a href="https://data.gv.at">BLSG Fachgruppe data.gv.at</a></p>
     <hr title="separator">
 </div>
 <nav id="toc"></nav>
 <main>
     <section>
+        <p>Bei DCAT-AP AT handelt es sich um das österreichische Profil der europäischen Metadatenspezifikation DCAT-AP die zur Beschreibung von Datenkatalogen eingeführt wurde. DCAT-AP wiederum ist ein Profil der W3C Recommendation DCAT.</p>
+        <p>Das folgende Diagramm zeigt die primären Klassen, ihre Beziehungen, sowie ihre obligatorischen und empfohlenen Eigenschaften. Zur besseren Lesbarkeit werden Klassen und Eigenschaften in beiden Überschriften und im Diagramm mit benutzerfreundlichen Bezeichnungen vorgestellt. Die eigentlichen Metadatenausdrücke, also die vollständigen URIs von Klassen und Eigenschaften, sind in den Details unter der jeweiligen Überschrift aufgeführt.</p>
+        <!--
         <p>DCAT-AP AT is a metadata specification introduced for the purpose of describing data catalogs. More specifically, DCAT-AP AT is an Austrian profile of the European metadata specification DCAT-AP. DCAT-AP in turn, is a profile of the W3C recommendation DCAT.</p>
         <p>The diagram below shows only the primary classes, their relationships and their mandatory and recommended properties. For improved readability, classes and properties are introduced using friendly labels in both headings and the diagram below. The actual metadata expressions, i.e. the full URIs of classes and properties, are listed in the details under each respective heading.</p>
+        -->
         <div id="diagram" class="mermaid">
             classDiagram
 
@@ -114,15 +136,16 @@
     </section>
 </main>
 
-<script src="https://lankadedata.se/spec/assets/fixup.js"></script>
+<script src="libs/fixup.js"></script>
 <script>mermaid.init(document.getElementById("diagram"));</script>
 </body>
 
 <script src="../libs/specs.js"></script>
 <script>
-  document.targetLanguage = 'en';
+  document.targetLanguage = 'de';
 </script>
 <script src="../config.js"></script>
-<link rel="stylesheet" href="https://lankadedata.se/spec/assets/style.css">
+<link rel="stylesheet" href="libs/w3c_base.css">
+<link rel="stylesheet" href="libs/w3c_tweaks.css">
 
 </html>
