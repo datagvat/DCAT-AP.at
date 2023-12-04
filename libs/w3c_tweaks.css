@@ -1,0 +1,16 @@
+body {
+  background-image: url(margin-blue.png) !important;
+}
+
+.logo img {
+  height: 90px;
+  margin-top: -10px;
+}
+
+.ms_datatable table.data tbody td:first-child,
+.ms_datatable table.data thead th:first-child
+{
+    border-right: 2px solid;
+    border-top: 1px solid silver;
+    padding-right: 1em;
+}

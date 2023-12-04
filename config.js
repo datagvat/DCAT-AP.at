@@ -1,7 +1,7 @@
 rdforms_specs.default({
   language: 'de',
   bundles: [
-    ['../dcatapat.json'],
+    ['dcatapat.json'],
   ],
   main: [
     'dcatat:Catalog',
