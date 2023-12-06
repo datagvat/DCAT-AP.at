@@ -4,4 +4,4 @@ Repository für die Entwicklung der österreichischen Variante von DCAT-AP als M
 
 Work in progress!
 
-Momentan geplant in [Deutsch](./de/index.html) und [Englisch](./en/index.html).
+Die Dokumentation wird mit Hilfe von [RDForms-specs](https://bitbucket.org/metasolutions/rdforms-specs/) erstellt.
