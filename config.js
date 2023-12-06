@@ -9,7 +9,8 @@ rdforms_specs.init({
     'dcatat:Distribution',
     'dcatat:DataService',
     'dcatat:CatalogRecord',
-    'dcatat:foaf:Agent'
+    'dcatat:foaf:Agent',
+    'dcatat:dcat:contactPoint',
   ],
   language: document.targetLanguage,
   supportive: [

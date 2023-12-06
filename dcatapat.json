@@ -4751,6 +4751,301 @@
         "pref": 1,
         "max": 1
       }
+    },
+    {
+      "id": "dcatat:dcat:contactPoint",
+      "type": "group",
+      "nodetype": "RESOURCE",
+      "label": {
+        "en": "Contact point",
+        "sv": "Kontaktuppgift",
+        "de": "Kontaktpunkt"
+      },
+      "description": {
+        "en": "This property contains contact information that can be used for flagging errors in the Dataset / Data service or sending comments",
+        "sv": "Egenskapen innehåller kontaktuppgifter som kan användas för att flagga fel i datamängden / datatjänsten eller för att skicka kommentarer",
+        "de": "Diese Eigenschaft enthält Kontaktinformationen die zum Melden von Fehlern im Datensatz oder zum Versenden von Kommentaren verwendet werden können"
+      },
+      "items": [
+        "dcatat:vcard:kindIndOrOrg",
+        "dcatat:vcard:fn",
+        "dcatat:vcard:hasEmail",
+        "dcatat:vcard:hasTelephone",
+        "dcatat:vcard:hasAddress"
+      ],
+      "property": "dcat:contactPoint",
+      "constraints": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
+          "http://www.w3.org/2006/vcard/ns#Organization",
+          "http://www.w3.org/2006/vcard/ns#Individual",
+          "http://www.w3.org/2006/vcard/ns#Kind"
+        ]
+      },
+      "cardinality": {
+        "min": 0,
+        "pref": 1
+      }
+    },
+    {
+      "id": "dcatat:vcard:kindIndOrOrg",
+      "type": "choice",
+      "nodetype": "URI",
+      "property": "rdf:type",
+      "label": {
+        "en": "Kind",
+        "sv": "Typ",
+        "de": "Art"
+      },
+      "description": {
+        "en": "This property tells whether the contect point corresponds to an Individual or an Organisation.",
+        "sv": "Egenskapen anger om kontaktuppgiften motsvarar en individ eller organisation.",
+        "de": "Diese Eigenschaft gibt an ob der Kontaktpunkt einer Einzelperson oder einer Organisation entspricht."
+      },
+      "choices": [
+        {
+          "value": "http://www.w3.org/2006/vcard/ns#Individual",
+          "label": {
+            "en": "Individual",
+            "sv": "Individ",
+            "de": "Einzelperson"
+          },
+          "description": {
+            "en": "The contectpoint corresponds to an individual.",
+            "sv": "Kontaktuppgiften motsvarar en individ.",
+            "de": "Der Kontaktpunkt entspricht einer Einzelperson."
+          }
+        },
+        {
+          "value": "http://www.w3.org/2006/vcard/ns#Organization",
+          "label": {
+            "en": "Organization",
+            "sv": "Organisation",
+            "de": "Organisation"
+          },
+          "description": {
+            "en": "The contact point corresponds to an organization. An organization is a single entity, and might represent a business or government, a department or division within a business or government, a club, an association, or the like.",
+            "sv": "Kontaktuppgiften motsvarar en organisation. En organisation kan motsvara ett företag, en myndighet, en förening osv.",
+            "de": "Der Kontaktpunkt entspricht einer Organisation. Eine Organisation ist eine einzelne Einheit und kann ein Unternehmen oder eine Regierung, eine Abteilung oder Abteilung innerhalb eines Unternehmens oder einer Regierung, eine Vereinigung oder dergleichen repräsentieren."
+          }
+        }
+      ],
+      "cardinality": {
+        "min": 1,
+        "pref": 0,
+        "max": 1
+      }
+    },
+    {
+      "id": "dcatat:vcard:fn",
+      "property": "vcard:fn",
+      "label": {
+        "en": "Formatted name",
+        "sv": "Namn",
+        "de": "Name"
+      },
+      "description": {
+        "en": "The text that corresponds to the name of the contactpoint.",
+        "sv": "En text som motsvarar namnet på kontaktuppgiften.",
+        "de": "Der formatierte Text des dazugehörigen Namens die Kontaktstelle"
+      },
+      "type": "text",
+      "nodetype": "LITERAL",
+      "cardinality": {
+        "min": 1,
+        "pref": 0
+      }
+    },
+    {
+      "id": "dcatat:vcard:hasEmail",
+      "property": "vcard:hasEmail",
+      "label": {
+        "en": "Email",
+        "sv": "E-postadress",
+        "de": "E-Mail-Adresse"
+      },
+      "description": {
+        "en": "An e-mail address used by a person or a specific administrative function within an organization.",
+        "sv": "En mailadress som används av en person eller en funktionsadress inom en organisation.",
+        "de": "Eine E-Mail-Adresse, die von einer Person oder einer bestimmten Verwaltungsfunktion innerhalb einer Organisation verwendet wird."
+      },
+      "constraints": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Email"
+      },
+      "type": "text",
+      "automatic": true,
+      "valueTemplate": "mailto:",
+      "styles": [
+        "email"
+      ],
+      "nodetype": "URI",
+      "cardinality": {
+        "min": 1,
+        "pref": 0
+      }
+    },
+    {
+      "id": "dcatat:vcard:hasTelephone",
+      "property": "vcard:hasTelephone",
+      "label": {
+        "en": "Telephone",
+        "sv": "Telefon",
+        "de": "Telefon"
+      },
+      "description": {
+        "en": "The telephone number should be given including country calling code, e.g. +4618100000.",
+        "sv": "Ett telefonnummer ska ges inklusive landskod, t.ex. +4618100000.",
+        "de": "Die Telefonnummer sollte angegeben werden. Sie sollte die Ländervorwahl enthalten, z.B. +4618100000."
+      },
+      "type": "group",
+      "automatic": true,
+      "constraints": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Voice"
+      },
+      "items": [
+        {
+          "type": "text",
+          "nodetype": "URI",
+          "cardinality": {
+            "min": 1,
+            "pref": 1,
+            "max": 1
+          },
+          "label": {
+            "en": "Number",
+            "sv": "Nummer",
+            "da": "Nummer",
+            "de": "Nummer"
+          },
+          "description": {
+            "en": "The telephone number should be given including country calling code, e.g. +4618100000.",
+            "sv": "Ett telefonnummer ska ges inklusive landskod, t.ex. +4618100000.",
+            "de": "Die Telefonnummer sollte angegeben werden. Sie sollte die Ländervorwahl enthalten, z.B. +4618100000."
+          },
+          "property": "vcard:hasValue",
+          "pattern": "^[0-9+()-.]+$",
+          "valueTemplate": "tel:$1"
+        }
+      ],
+      "cardinality": {
+        "min": 0,
+        "pref": 1
+      }
+    },
+    {
+      "id": "dcatat:vcard:hasAddress",
+      "property": "vcard:hasAddress",
+      "label": {
+        "en": "Address",
+        "sv": "Adress",
+        "de": "Adresse"
+      },
+      "description": {
+        "en": "To specify the delivery address for the contact point.",
+        "sv": "För att specificera en adress för kontaktuppgiften.",
+        "de": "Zum Angeben der Adresse für die Kontaktstelle"
+      },
+      "constraints": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2006/vcard/ns#Address"
+      },
+      "type": "group",
+      "automatic": true,
+      "cardinality": {
+        "min": 0,
+        "pref": 1
+      },
+      "cls": [
+        "cardgroup"
+      ],
+      "items": [
+        "dcatat:vcard:country-name",
+        "dcatat:vcard:locality",
+        "dcatat:vcard:postal-code",
+        "dcatat:vcard:street-address"
+      ]
+    },
+    {
+      "id": "dcatat:vcard:country-name",
+      "property": "vcard:country-name",
+      "label": {
+        "en": "Country name",
+        "sv": "Land",
+        "de": "Land"
+      },
+      "description": {
+        "en": "The country name associated with the address.",
+        "sv": "Ett namn på adressens land.",
+        "de": "Der Ländername der damit verbundenen Adresse das Land."
+      },
+      "type": "text",
+      "nodetype": "LITERAL",
+      "cardinality": {
+        "min": 0,
+        "pref": 1,
+        "max": 1
+      }
+    },
+    {
+      "id": "dcatat:vcard:locality",
+      "property": "vcard:locality",
+      "label": {
+        "en": "Locality",
+        "sv": "Postort",
+        "de": "Ort"
+      },
+      "description": {
+        "en": "The locality (e.g. city or town) associated with the address.",
+        "sv": "Postorten (t.ex. en stad eller ort) för en adress.",
+        "de": "Die Lokalität (z.B. Stadt oder Dorf) der damit verbundenen Adresse."
+      },
+      "type": "text",
+      "nodetype": "LITERAL",
+      "cardinality": {
+        "min": 0,
+        "pref": 1,
+        "max": 1
+      }
+    },
+    {
+      "id": "dcatat:vcard:postal-code",
+      "property": "vcard:postal-code",
+      "label": {
+        "en": "Postal code",
+        "sv": "Postkod",
+        "de": "Postleitzahl"
+      },
+      "description": {
+        "en": "The postal code associated with the address.",
+        "sv": "Postkoden för adressen.",
+        "de": "Die Postleitzahl der damit verbundenen Adresse."
+      },
+      "type": "text",
+      "nodetype": "LITERAL",
+      "cardinality": {
+        "min": 0,
+        "pref": 1,
+        "max": 1
+      }
+    },
+    {
+      "id": "dcatat:vcard:street-address",
+      "property": "vcard:street-address",
+      "label": {
+        "en": "Street address",
+        "sv": "Gatuadress",
+        "de": "Straßenadresse"
+      },
+      "description": {
+        "en": "The street address associated with the address.",
+        "sv": "Gatuadressen för adressen.",
+        "de": "Die Straßenadresse der damit verbundenen Adresse."
+      },
+      "type": "text",
+      "nodetype": "LITERAL",
+      "cardinality": {
+        "min": 0,
+        "pref": 1,
+        "max": 1
+      }
     }
   ]
 }
