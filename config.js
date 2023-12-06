@@ -1,4 +1,4 @@
-rdforms_specs.default({
+rdforms_specs.init({
   language: 'de',
   bundles: [
     ['dcatapat.json'],
