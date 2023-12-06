@@ -8,7 +8,8 @@ rdforms_specs.init({
     'dcatat:Dataset',
     'dcatat:Distribution',
     'dcatat:DataService',
-    'dcatat:CatalogRecord'
+    'dcatat:CatalogRecord',
+    'dcatat:foaf:Agent'
   ],
   language: document.targetLanguage,
   supportive: [
