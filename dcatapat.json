@@ -3086,7 +3086,9 @@
         "de": "Typ"
       },
       "description": {
-        "en": "The nature or genre of the resource. HVD (https://publications.europa.eu/resource/authority/dataset-type)."
+        "en": "The nature or genre of the resource (https://publications.europa.eu/resource/authority/dataset-type).",
+        "de": "Der Typ der Ressource (https://publications.europa.eu/resource/authority/dataset-type).",
+        "sv": "Resursens typ (https://publications.europa.eu/resource/authority/dataset-type)."
       },
       "constraints": {
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/2004/02/skos/core#Concept"
