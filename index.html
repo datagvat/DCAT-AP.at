@@ -55,7 +55,7 @@
 <main>
     <section>
         <p>Bei DCAT-AP AT handelt es sich um das österreichische Profil der europäischen Metadatenspezifikation DCAT-AP die zur Beschreibung von Datenkatalogen eingeführt wurde. DCAT-AP wiederum ist ein Profil der W3C Recommendation DCAT.</p>
-        <p>Das folgende Diagramm zeigt die primären Klassen, ihre Beziehungen, sowie ihre obligatorischen und empfohlenen Eigenschaften. Zur besseren Lesbarkeit werden Klassen und Eigenschaften in beiden Überschriften und im Diagramm mit benutzerfreundlichen Bezeichnungen vorgestellt. Die eigentlichen Metadatenausdrücke, also die vollständigen URIs von Klassen und Eigenschaften, sind in den Details unter der jeweiligen Überschrift aufgeführt.</p>
+        <p>Das folgende Diagramm zeigt die primären Klassen, ihre Beziehungen, sowie ihre verpflichtenden und empfohlenen Eigenschaften. Zur besseren Lesbarkeit werden Klassen und Eigenschaften in beiden Überschriften und im Diagramm mit benutzerfreundlichen Bezeichnungen vorgestellt. Die eigentlichen Metadatenausdrücke, also die vollständigen URIs von Klassen und Eigenschaften, sind in den Details unter der jeweiligen Überschrift aufgeführt.</p>
         <!--
         <p>DCAT-AP AT is a metadata specification introduced for the purpose of describing data catalogs. More specifically, DCAT-AP AT is an Austrian profile of the European metadata specification DCAT-AP. DCAT-AP in turn, is a profile of the W3C recommendation DCAT.</p>
         <p>The diagram below shows only the primary classes, their relationships and their mandatory and recommended properties. For improved readability, classes and properties are introduced using friendly labels in both headings and the diagram below. The actual metadata expressions, i.e. the full URIs of classes and properties, are listed in the details under each respective heading.</p>
@@ -109,7 +109,7 @@
 
             class Distribution {
               dcat:accessURL
-              dcat:availability
+              dcatap:availability
               dcterms:description
               dcterms:format
               dcterms:license
@@ -120,17 +120,20 @@
               dcterms:title
               dcat:endpointDescription
               dcat:servesDataset
+              dcterms:license
+              dcterms:format
+              dcat:theme
             }
 
             class Agent {
               foaf:name
-              dcat:type
+              dcterms:type
             }
 
             class ContactPoint {
-              vcard:kind
+              rdf:type
               vcard:fn
-              vcard:email
+              vcard:hasEmail
             }
         </div>
     </section>
