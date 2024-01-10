@@ -13,7 +13,8 @@
     "dcatap": "http://data.europa.eu/r5r/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "spdx": "http://spdx.org/rdf/terms#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
   },
   "templates": [
     {
@@ -31,10 +32,11 @@
         "dcatat:dcterms:title_da",
         "dcatat:dcterms:description_da",
         "dcatat:contactPoint_da",
-        "dcatat:distribution_da",
         "dcatat:keyword_da",
         "dcatat:dcterms:publisher_da",
-        "dcatat:theme-da",
+        "dcatat:theme_da",
+        "dcatat:dcterms:identifier_da",
+        "dcatat:distribution_da",
         "dcatat:dcterms:spatial_da",
         "dcatat:dcterms:temporal_da",
         "dcatat:applicableLegislation",
@@ -45,7 +47,6 @@
         "dcatat:foaf:page_da",
         "dcatat:dcterms:accrualPeriodicity_da",
         "dcatat:dcterms:hasVersion",
-        "dcatat:dcterms:identifier_da",
         "dcatat:dcterms:isReferencedBy",
         "dcatat:dcterms:isVersionOf",
         "dcatat:landingPage_da",
@@ -80,10 +81,11 @@
       },
       "items": [
         "dcatat:accessURL_di",
-        "dcatat:availability_di",
-        "dcatat:dcterms:description_di",
-        "dcatat:dcterms:format",
+        "dcatat:dcterms:format_di",
         "dcatat:dcterms:license_di",
+        "dcatat:dcterms:description_di",
+        "dcatat:availability_di",
+        "dcatat:dcterms:title_di",
         "dcatat:accessService",
         "dcatat:byteSize_di",
         "dcatat:spdx:checksum_di",
@@ -100,7 +102,6 @@
         "dcatat:spatialResolutionInMeters_di",
         "dcatat:adms:status_di",
         "dcatat:temporalResolution_di",
-        "dcatat:dcterms:title_di",
         "dcatat:dcterms:modified_di"
       ],
       "cardinality": {
@@ -182,8 +183,8 @@
         "dcatat:endpointDescription",
         "dcatat:servesDataset",
         "dcatat:dcterms:license_ds",
-        "dcatat:dcterms:format",
-        "dcatat:theme-ds",
+        "dcatat:dcterms:format_ds",
+        "dcatat:theme_ds",
         "dcatat:dcterms:accessRights",
         "dcatat:dcterms:description_ds",
         "dcatat:applicableLegislation",
@@ -501,17 +502,17 @@
     },
     {
       "id": "dcatat:dcterms:language_di",
-      "extends": "dcatat:dcterms:language",
       "type": "choice",
       "nodetype": "URI",
+      "extends": "dcatat:dcterms:language",
+      "cardinality": {
+        "min": 0,
+        "pref": 0
+      },
       "description": {
         "en": "This property refers to a language used in the Distribution. This property can be repeated if the metadata is provided in multiple languages.",
         "sv": "Egenskapen hänvisar till distributionens språk. Egenskapen kan upprepas om det finns flera språk i distributionen.",
         "de": "Diese Eigenschaft bezieht sich auf eine Sprache der Distribution. Diese Eigenschaft kann wiederholt werden wenn mehrere Sprachen in der Distribution vorhanden sind."
-      },
-      "cardinality": {
-        "min": 0,
-        "pref": 0
       }
     },
     {
@@ -1181,7 +1182,8 @@
       "property": "dcterms:license",
       "cardinality": {
         "min": 0,
-        "pref": 1
+        "pref": 1,
+        "max": 1
       }
     },
     {
@@ -1195,7 +1197,6 @@
         "cardgroup"
       ],
       "items": [
-        "dcatat:dcterms:cc-license-choices",
         {
           "type": "choice",
           "nodetype": "URI",
@@ -1204,16 +1205,17 @@
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "dcterms:LicenseDocument"
           },
           "label": {
-            "en": "License - other",
-            "sv": "Licens - övriga",
-            "de": "Lizenz - Andere"
+            "en": "License",
+            "sv": "Licens",
+            "de": "Lizenz"
           },
           "cardinality": {
             "min": 0,
             "pref": 1,
             "max": 1
           }
-        }
+        },
+        "dcatat:dcterms:cc-license-choices"
       ],
       "label": {
         "en": "License",
@@ -1237,7 +1239,6 @@
         "disjoint"
       ],
       "items": [
-        "dcatat:dcterms:cc-license-choices",
         {
           "type": "choice",
           "nodetype": "URI",
@@ -1246,9 +1247,9 @@
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "dcterms:LicenseDocument"
           },
           "label": {
-            "en": "License - other",
-            "sv": "Licens - övrig",
-            "de": "Lizenz - andere"
+            "en": "License",
+            "sv": "Licens",
+            "de": "Lizenz"
           },
           "description": {
             "en": "Refers to which license under which the Distribution is made available if you are not using a CC license.",
@@ -1256,11 +1257,11 @@
             "de": "Bezieht sich darauf unter welcher Lizenz die Distribution bereitgestellt wird wenn keine CC-Lizenz verwendet wird."
           },
           "cardinality": {
-            "min": 0,
-            "pref": 1,
+            "min": 1,
             "max": 1
           }
-        }
+        },
+        "dcatat:dcterms:cc-license-choices"
       ],
       "label": {
         "en": "License",
@@ -1268,8 +1269,7 @@
         "de": "Lizenz"
       },
       "cardinality": {
-        "min": 0,
-        "pref": 1,
+        "min": 1,
         "max": 1
       },
       "description": {
@@ -1292,7 +1292,6 @@
         "cardgroup"
       ],
       "items": [
-        "dcatat:dcterms:cc-license-choices",
         {
           "type": "choice",
           "nodetype": "URI",
@@ -1301,15 +1300,16 @@
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "dcterms:LicenseDocument"
           },
           "label": {
-            "en": "License - other",
-            "sv": "Licens - övriga",
-            "de": "Lizenz - Andere"
+            "en": "License",
+            "sv": "Licens",
+            "de": "Lizenz"
           },
           "cardinality": {
             "min": 0,
             "pref": 1
           }
-        }
+        },
+        "dcatat:dcterms:cc-license-choices"
       ],
       "label": {
         "en": "License",
@@ -3601,8 +3601,7 @@
         "de": "Kontaktpunkt"
       },
       "cardinality": {
-        "min": 0,
-        "pref": 1
+        "min": 1
       },
       "constraints": {
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
@@ -3623,8 +3622,7 @@
       },
       "property": "dcat:keyword",
       "cardinality": {
-        "min": 0,
-        "pref": 1
+        "min": 1
       },
       "description": {
         "en": "This property contains a keyword or tag describing the Dataset",
@@ -3665,8 +3663,7 @@
         "de": "Diese Eigenschaft bezieht sich auf eine Einrichtung (Organisation), die für die Erstellung des Datensatzes verantwortlich ist."
       },
       "cardinality": {
-        "min": 0,
-        "pref": 1,
+        "min": 1,
         "max": 1
       }
     },
@@ -3791,7 +3788,7 @@
       ]
     },
     {
-      "id": "dcatat:theme-da",
+      "id": "dcatat:theme_da",
       "type": "choice",
       "extends": "dcatat:theme",
       "description": {
@@ -3800,12 +3797,11 @@
         "de": "Diese Eigenschaft bezieht sich auf eine Kategorie des Datensatzes. Ein Datensatz kann mit mehreren Themen verknüpft sein."
       },
       "cardinality": {
-        "min": 0,
-        "pref": 1
+        "min": 1
       }
     },
     {
-      "id": "dcatat:theme-ds",
+      "id": "dcatat:theme_ds",
       "type": "choice",
       "extends": "dcatat:theme",
       "description": {
@@ -4460,12 +4456,11 @@
       "type": "text",
       "nodetype": "ONLY_LITERAL",
       "cardinality": {
-        "min": 0,
-        "pref": 0
+        "min": 1
       }
     },
     {
-      "id": "dcatat:dcterms:format",
+      "id": "dcatat:dcterms:format_di",
       "property": "dcterms:format",
       "type": "text",
       "nodetype": "URI",
@@ -4475,9 +4470,31 @@
         "sv": "Format"
       },
       "description": {
-        "en": "This property refers to the file format of the Distribution or Data Service according to the EU Vocabularies File Type Named Authority List (https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type).",
-        "de": "Diese Eigenschaft bezieht sich auf das Dateiformat der Distribution oder des Datendienstes gemäß der EU Vocabularies File Type Named Authority List (https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type).",
-        "sv": "Denna egenskap anger distributionens eller datatjänstens filformat enligt EU Vocabularies File Type Named Authority List (https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type)."
+        "en": "This property refers to the file format of the Distribution according to the EU Vocabularies File Type Named Authority List (https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type).",
+        "de": "Diese Eigenschaft bezieht sich auf das Dateiformat der Distribution gemäß der EU Vocabularies File Type Named Authority List (https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type).",
+        "sv": "Denna egenskap anger distributionens filformat enligt EU Vocabularies File Type Named Authority List (https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type)."
+      },
+      "cardinality": {
+        "min": 1
+      },
+      "styles": [
+        "externalLink"
+      ]
+    },
+    {
+      "id": "dcatat:dcterms:format_ds",
+      "property": "dcterms:format",
+      "type": "text",
+      "nodetype": "URI",
+      "label": {
+        "en": "Format",
+        "de": "Format",
+        "sv": "Format"
+      },
+      "description": {
+        "en": "This property refers to the file format of the Data Service according to the EU Vocabularies File Type Named Authority List (https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type).",
+        "de": "Diese Eigenschaft bezieht sich auf das Dateiformat des Datendienstes gemäß der EU Vocabularies File Type Named Authority List (https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type).",
+        "sv": "Denna egenskap anger datatjänstens filformat enligt EU Vocabularies File Type Named Authority List (https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/file-type)."
       },
       "cardinality": {
         "pref": 1
