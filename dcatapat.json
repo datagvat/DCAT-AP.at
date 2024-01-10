@@ -501,21 +501,6 @@
       }
     },
     {
-      "id": "dcatat:dcterms:language_di",
-      "type": "choice",
-      "nodetype": "URI",
-      "extends": "dcatat:dcterms:language",
-      "cardinality": {
-        "min": 0,
-        "pref": 0
-      },
-      "description": {
-        "en": "This property refers to a language used in the Distribution. This property can be repeated if the metadata is provided in multiple languages.",
-        "sv": "Egenskapen hänvisar till distributionens språk. Egenskapen kan upprepas om det finns flera språk i distributionen.",
-        "de": "Diese Eigenschaft bezieht sich auf eine Sprache der Distribution. Diese Eigenschaft kann wiederholt werden wenn mehrere Sprachen in der Distribution vorhanden sind."
-      }
-    },
-    {
       "id": "dcatat:downloadURL_di",
       "type": "group",
       "nodetype": "URI",
@@ -2656,6 +2641,21 @@
         }
       ],
       "nodetype": "URI"
+    },
+    {
+      "id": "dcatat:dcterms:language_di",
+      "type": "choice",
+      "nodetype": "URI",
+      "extends": "dcatat:dcterms:language",
+      "cardinality": {
+        "min": 0,
+        "pref": 0
+      },
+      "description": {
+        "en": "This property refers to a language used in the Distribution. This property can be repeated if the metadata is provided in multiple languages.",
+        "sv": "Egenskapen hänvisar till distributionens språk. Egenskapen kan upprepas om det finns flera språk i distributionen.",
+        "de": "Diese Eigenschaft bezieht sich auf eine Sprache der Distribution. Diese Eigenschaft kann wiederholt werden wenn mehrere Sprachen in der Distribution vorhanden sind."
+      }
     },
     {
       "id": "dcatat:dcterms:language_da",
