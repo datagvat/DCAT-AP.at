@@ -14,5 +14,10 @@ rdforms_specs.init({
   ],
   language: document.targetLanguage,
   supportive: [
-  ]
+  ],
+  extras: {
+    mapping: {
+      de: 'Entsprechung in metadaten-data.gv.at 2.6'
+    }
+  }
 });

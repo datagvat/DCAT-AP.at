@@ -4457,6 +4457,11 @@
       "nodetype": "ONLY_LITERAL",
       "cardinality": {
         "min": 1
+      },
+      "text": {
+        "mapping": {
+          "de": "metadata_identifier"
+	}
       }
     },
     {
