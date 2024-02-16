@@ -3054,7 +3054,10 @@
       "cardinality": {
         "min": 0,
         "pref": 1
-      }
+      },
+      "styles": [
+        "invisible"
+      ]
     },
     {
       "id": "dcatat:adms:sample_da",
@@ -3143,7 +3146,10 @@
       "cardinality": {
         "min": 0,
         "pref": 1
-      }
+      },
+      "styles": [
+        "invisible"
+      ]
     },
     {
       "id": "dcatat:service_ca",
@@ -3161,7 +3167,10 @@
       "cardinality": {
         "min": 0,
         "pref": 1
-      }
+      },
+      "styles": [
+        "invisible"
+      ]
     },
     {
       "id": "dcatat:record_ca",
