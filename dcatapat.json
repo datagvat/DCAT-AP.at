@@ -2849,15 +2849,15 @@
           "label": {
             "en": "semimonthly",
             "sv": "två gånger per månad",
-            "de": "zweimal im Monat"
+            "de": "zweimal pro Monat"
           }
         },
         {
           "value": "http://publications.europa.eu/resource/authority/frequency/WEEKLY_2",
           "label": {
             "en": "semiweekly",
-            "sv": "två gånge per vecka",
-            "de": "zweimal in Woche"
+            "sv": "två gånger per vecka",
+            "de": "zweimal pro Woche"
           }
         },
         {
@@ -2865,7 +2865,7 @@
           "label": {
             "en": "three times a month",
             "sv": "tre gånger per månad",
-            "de": "dreimal im Monat"
+            "de": "dreimal pro Monat"
           }
         },
         {
@@ -2873,7 +2873,7 @@
           "label": {
             "en": "three times a week",
             "sv": "tre gånger per vecka",
-            "de": "dreimal in Woche"
+            "de": "dreimal pro Woche"
           }
         },
         {
@@ -2881,7 +2881,7 @@
           "label": {
             "en": "three times a year",
             "sv": "tre gånger per år",
-            "de": "dreimal im Jahr"
+            "de": "dreimal pro Jahr"
           }
         },
         {
