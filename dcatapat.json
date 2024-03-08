@@ -39,7 +39,7 @@
         "dcatat:distribution_da",
         "dcatat:dcterms:spatial_da",
         "dcatat:dcterms:temporal_da",
-        "dcatat:applicableLegislation",
+        "dcatat:applicableLegislation_da",
         "dcatat:hvdCategory",
         "dcatat:dcterms:accessRights",
         "dcatat:dcterms:conformsTo_da",
@@ -92,6 +92,7 @@
         "dcatat:compressFormat_di",
         "dcatat:foaf:page_di",
         "dcatat:downloadURL_di",
+        "dcatat:applicableLegislation_di",
         "dcatat:odrl:hasPolicy_di",
         "dcatat:dcterms:language_di",
         "dcatat:dcterms:conformsTo_di",
@@ -187,7 +188,7 @@
         "dcatat:theme_ds",
         "dcatat:dcterms:accessRights",
         "dcatat:dcterms:description_ds",
-        "dcatat:applicableLegislation",
+        "dcatat:applicableLegislation_ds",
         "dcatat:hvdCategory"
       ]
     },
@@ -198,13 +199,13 @@
       "property": "http://data.europa.eu/r5r/hvdCategory",
       "label": {
         "en": "High-value dataset",
-        "sv": "Särskilt värdefull datamängd",
+        "sv": "Värdefull datamängd",
         "de": "Hochwertiger Datensatz"
       },
       "description": {
-        "en": "Categorization of high value dataset as described in Commission Implementing Regulation (EU) 2023/138 of 21 December 2022, Annex, Section 3",
-        "de": "Kategorisierung als hochwertiger Datensatz gemäß Durchführungsverordnung (EU) 2023/138 der Kommission vom 21. Dezember 2022, Annex, Abschnitt 3",
-        "sv": "Kategorisering som särskilt värdefull datamängd enligt beskrivning i kommissionens genomförandeförordning (EU) 2023/138, den 21 december 2022, annex, avsnitt 3"
+        "en": "Categorization of high value dataset as described in Commission Implementing Regulation (EU) 2023/138 of 21 December 2022, Annex, Section 3. Mandatory only for high-value datasets and data services.",
+        "de": "Kategorisierung als hochwertiger Datensatz gemäß Durchführungsverordnung (EU) 2023/138 der Kommission vom 21. Dezember 2022, Annex, Abschnitt 3. Verpflichtend nur für hochwertige Datensätze und Datendienste.",
+        "sv": "Kategorisering som värdefull datamängd enligt beskrivning i kommissionens genomförandeförordning (EU) 2023/138, den 21 december 2022, annex, avsnitt 3. Obligatoriskt enbart för värdefulla datamängder och datatjänster."
       },
       "deps": ["http://data.europa.eu/r5r/applicableLegislation", "http://data.europa.eu/eli/reg_impl/2023/138/oj"],
       "choices": [
@@ -258,9 +259,7 @@
         }
       ],
       "cardinality": {
-        "min": 0,
-        "pref": 0,
-        "max": 1
+        "min": 1
       }
     },
     {
@@ -278,7 +277,7 @@
           "value": "http://data.europa.eu/eli/reg_impl/2023/138/oj",
           "label": {
             "en": "High-value dataset",
-            "sv": "Särskilt värdefull datamängd",
+            "sv": "Värdefull datamängd",
             "de": "Hochwertiger Datensatz"
           },
           "description": {
@@ -296,6 +295,39 @@
       "styles": [
         "verticalCheckBoxes"
       ]
+    },
+    {
+      "id": "dcatat:applicableLegislation_da",
+      "extends": "dcatat:applicableLegislation",
+      "type": "choice",
+      "nodetype": "URI",
+      "description": {
+        "en": "Legislation that mandates the creation or management of the Dataset.",
+        "sv": "Lagstiftning som kräver att datamängden skapas och/eller hanteras.",
+        "de": "Gesetzgebung welche die Erstellung oder Verwaltung des Datensatzes vorschreibt."
+      }
+    },
+    {
+      "id": "dcatat:applicableLegislation_ds",
+      "extends": "dcatat:applicableLegislation",
+      "type": "choice",
+      "nodetype": "URI",
+      "description": {
+        "en": "Legislation that mandates the creation or management of the Data Service.",
+        "sv": "Lagstiftning som kräver att datatjänsten skapas och/eller hanteras.",
+        "de": "Gesetzgebung welche die Erstellung oder Verwaltung des Datendienstes vorschreibt."
+      }
+    },
+    {
+      "id": "dcatat:applicableLegislation_di",
+      "extends": "dcatat:applicableLegislation",
+      "type": "choice",
+      "nodetype": "URI",
+      "description": {
+        "en": "Legislation that mandates the creation or management of the Distribution. Note, should only be used if surrounding Datasets also is marked with applicable legislation.",
+        "sv": "Lagstiftning som kräver att distributionen skapas och/eller hanteras. Observera, använd endast om den omgivande datamängden har motsvarande märkning.",
+        "de": "Gesetzgebung welche die Erstellung oder Verwaltung der Distribution vorschreibt. Diese Eigenschaft soll nur verwendet werden falls der auf diese Distribution verweisende Datensatz ebenfalls als hochwertig gekennzeichnet ist."
+      }
     },
     {
       "id": "dcatat:dcterms:modified_di",
