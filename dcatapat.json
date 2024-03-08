@@ -3105,7 +3105,8 @@
         "sv": "Prov"
       },
       "description": {
-        "en": "Links to a sample of a Dataset (which is itself a Dataset)"
+        "en": "Links to a sample of a Dataset (which is itself a Dataset)",
+        "de": "Link zu einem Datensatz (der selbst ein Datensatz ist)"
       },
       "cardinality": {
         "min": 0,
@@ -3227,7 +3228,8 @@
         "en": "Primary topic"
       },
       "description": {
-        "en": "The primary topic of some page or document."
+        "en": "The primary topic of some page or document.",
+        "de": "Das Hauptthema einer Seite oder eines Dokuments."
       },
       "type": "text",
       "nodetype": "URI",
@@ -3290,7 +3292,8 @@
         "de": "Status"
       },
       "description": {
-        "en": "The status of the Asset in the context of a particular workflow process"
+        "en": "The status of the Asset in the context of a particular workflow process",
+        "de": "Der Status des Katalogeintrags im Kontext eines bestimmten Workflow-Prozesses"
       },
       "choices": [
         {
@@ -3408,7 +3411,8 @@
         "de": "Quelle"
       },
       "description": {
-        "en": "A related resource from which the described resource is derived."
+        "en": "A related resource from which the described resource is derived.",
+        "de": "Eine verwandte Ressource, von der die beschriebene Ressource abgeleitet ist."
       },
       "constraints": {
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#CatalogRecord"
@@ -3519,7 +3523,8 @@
         "de": "Ist Version von"
       },
       "description": {
-        "en": "A related resource of which the described resource is a version, edition, or adaptation."
+        "en": "A related resource of which the described resource is a version, edition, or adaptation.",
+        "de": "Eine verwandte Ressource von der die beschriebene Ressource eine Version, Edition oder Adaption ist."
       },
       "constraints": {
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "http://www.w3.org/ns/dcat#Dataset"
@@ -4068,7 +4073,8 @@
       "nodetype": "URI",
       "description": {
         "en": "This property indicates how long it is planned to keep the Distribution of the Dataset available",
-        "sv": "Denna egenskap berättar om den planerade tillgängligheten hos distributionen."
+        "sv": "Denna egenskap berättar om den planerade tillgängligheten hos distributionen.",
+        "de": "Diese Eigenschaft gibt an, wie lange die Distribution des Datensatzes voraussichtlich verfügbar bleibt."
       },
       "label": {
         "en": "Availability",
