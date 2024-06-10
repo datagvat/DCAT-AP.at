@@ -1656,9 +1656,9 @@
       },
       "constraints": {
         "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": [
-          "http://www.w3.org/2006/vcard/ns#Organization",
-          "http://www.w3.org/2006/vcard/ns#Individual",
-          "http://www.w3.org/2006/vcard/ns#Kind"
+          "http://xmlns.com/foaf/0.1/Agent",
+          "http://xmlns.com/foaf/0.1/Person",
+          "http://xmlns.com/foaf/0.1/Organization"
         ]
       }
     },
