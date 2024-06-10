@@ -1630,8 +1630,8 @@
         "cardgroup"
       ],
       "items": [
-        "dcatat:geodcat:dcterms:type-responsiblepartyrole",
-        "dcatat:geodcat:prov:agent"
+        "dcatat:dcat:hadRole",
+        "dcatat:prov:agent"
       ],
       "cardinality": {
         "min": 0,
@@ -1641,7 +1641,7 @@
     {
       "type": "choice",
       "nodetype": "RESOURCE",
-      "id": "dcatat:geodcat:prov:agent",
+      "id": "dcatat:prov:agent",
       "labelProperties": [
         "http://www.w3.org/2006/vcard/ns#fn"
       ],
@@ -1663,7 +1663,7 @@
       }
     },
     {
-      "id": "dcatat:geodcat:dcterms:type-responsiblepartyrole",
+      "id": "dcatat:dcat:hadRole",
       "type": "choice",
       "nodetype": "URI",
       "property": "dcat:hadRole",
@@ -3575,57 +3575,6 @@
       ],
       "cardinality": {
         "min": 1
-      }
-    },
-    {
-      "type": "choice",
-      "nodetype": "URI",
-      "property": "rdf:type",
-      "label": {
-        "en": "Kind",
-        "sv": "Typ",
-        "de": "Art"
-      },
-      "description": {
-        "en": "This property tells whether the contect point corresponds to an Individual or an Organisation.",
-        "sv": "Egenskapen anger om kontaktuppgiften motsvarar en individ eller organisation.",
-        "de": "Diese Eigenschaft gibt an ob der Kontaktpunkt einer Einzelperson oder einer Organisation entspricht."
-      },
-      "choices": [
-        {
-          "value": "http://www.w3.org/2006/vcard/ns#Individual",
-          "label": {
-            "en": "Individual",
-            "sv": "Individ",
-            "da": "Individ",
-            "de": "Einzelperson"
-          },
-          "description": {
-            "en": "The contectpoint corresponds to an individual.",
-            "sv": "Kontaktuppgiften motsvarar en individ.",
-            "de": "Der Kontaktpunkt entspricht einer Einzelperson."
-          }
-        },
-        {
-          "value": "http://www.w3.org/2006/vcard/ns#Organization",
-          "label": {
-            "en": "Organization",
-            "sv": "Organisation",
-            "nb": "Organisasjon",
-            "da": "Organisation",
-            "de": "Organisation"
-          },
-          "description": {
-            "en": "The contactpoint corresponds to an organization. An organization is a single entity, and might represent a business or government, a department or division within a business or government, a club, an association, or the like.",
-            "sv": "Kontaktuppgiften motsvarar en organisation. En organisation kan motsvara ett företag, en myndighet, en förening osv.",
-            "de": "Der Kontaktpunkt entspricht einer Organisation. Eine Organisation ist eine einzelne Einheit und kann ein Unternehmen oder eine Regierung, eine Abteilung oder Abteilung innerhalb eines Unternehmens oder einer Regierung, eine Vereinigung oder dergleichen repräsentieren."
-          }
-        }
-      ],
-      "cardinality": {
-        "min": 1,
-        "pref": 0,
-        "max": 1
       }
     },
     {
